@@ -11,7 +11,7 @@ namespace FirstApp
     // Fields
     private string name;
     private int number;
-    private double balance;
+    //private double balance;
 
     // Properties
 
@@ -21,23 +21,43 @@ namespace FirstApp
       set { name = value; }
     }
 
+    public int Number
+    {
+      get { return number; }
+    }
+
+    public double Balance { get; /*private set;*/ } = 0;
+
+    private static int counter = 1000;
+    public static int Counter
+    {
+      get { return counter; }
+    }
+
     // ctor
     public Account()
     {
       this.name = "undefined";
-      number = -999;
+      number = counter++;
+      Balance = 1;
     }
 
-    public Account(string name, int number, double balance)
+    public Account(string name, double balance)
     {
       this.name = name;
-      this.number = number;
-      this.balance = balance;
+      this.number = counter++;
+      this.Balance = balance;
+    }
+
+    static Account()
+    {
+
     }
 
     public override string ToString()
     {
-      return $"Account {number} of {name}, balance: {balance}";
+      //this.Balance = 123;
+      return $"Account {number} of {name}, balance: {Balance}";
     }
   }
 }

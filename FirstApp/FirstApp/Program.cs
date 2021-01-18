@@ -11,13 +11,31 @@ namespace FirstApp
       //Example1();
 
       Account acc1 = new Account();
-      Account acc2 = new Account("Uncle Scrooge", 1, 99999999);
+      Account acc2 = new Account("Uncle Scrooge", 99999999);
+      //acc1 = null;
 
       acc1.Name = "Micky Mouse";
 
       Console.WriteLine(acc1);
       Console.WriteLine(acc2);
       Console.WriteLine(acc2.Name);
+
+      //acc1.Balance = 1234;
+      Console.WriteLine(acc1.Balance);
+      //acc1.Number = 1234;
+      Console.WriteLine(acc1.Number);
+
+
+      //Console.WriteLine(acc1.GetHashCode() % 100);
+
+      Console.WriteLine($"next number: {Account.Counter}");
+
+
+      SingletonObject so1 = SingletonObject.GetInstance();
+      SingletonObject so2 = SingletonObject.GetInstance();
+      Console.WriteLine(so1 == so2);
+
+
       Console.ReadLine();
     }
 

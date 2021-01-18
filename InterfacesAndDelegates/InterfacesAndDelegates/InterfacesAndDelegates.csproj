@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2080F60-5C3C-42FB-A70B-05F63A6469D1}</ProjectGuid>
+    <ProjectGuid>{521E7141-28F3-4B33-9729-75ED9945E3CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstApp</RootNamespace>
-    <AssemblyName>FirstApp</AssemblyName>
+    <RootNamespace>InterfacesAndDelegates</RootNamespace>
+    <AssemblyName>InterfacesAndDelegates</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,9 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="MyExtensionMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingletonObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
